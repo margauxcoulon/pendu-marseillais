@@ -1,4 +1,4 @@
-# Le Pendu Marseillais
+# Le petit Pendu des familles :/
 
 ## Description
 Projet réalisé dans le cadre d’un exercice de développement web.  
@@ -38,7 +38,7 @@ pendu-marseillais/
 
 ### 1 - Cloner le dépôt
 ```bash
-git clone https://github.com/<margauxcoulon>/pendu-marseillais.git
+git clone https://github.com/margauxcoulon/pendu-marseillais.git
 cd pendu-marseillais
 ```
 
@@ -58,7 +58,7 @@ npm start
 L’application sera accessible sur http://localhost:3000
 
 ### Optionel - Version Vanilla JS
-Ouvre simplement le fichier index.html dans ton navigateur.
+Ouvre simplement le fichier `index.html` dans ton navigateur.
 
 ## 
 Projet développé par Margaux Coulon, étudiante à Centrale Marseille, en octobre 2025.
