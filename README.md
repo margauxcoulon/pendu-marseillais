@@ -58,7 +58,7 @@ npm start
 L’application sera accessible sur http://localhost:3000
 
 ### Optionel - Version Vanilla JS
-Ouvre simplement le fichier `index.html` dans ton navigateur.
+Ouvrir simplement le fichier `index.html` dans le navigateur.
 
 ## 
 Projet développé par Margaux Coulon, étudiante à Centrale Marseille, en octobre 2025.
