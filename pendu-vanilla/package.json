@@ -1,0 +1,16 @@
+{
+  "name": "ecm-starter-vanilla",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "vite": "^7.1.2"
+  }
+}

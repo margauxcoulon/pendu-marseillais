@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Le petit Pendu des familles</title>
+  </head>
+  <body>
+    <header>
+      <h1>Le petit Pendu des familles :/</h1>
+    </header>
+    <section class="controle">
+      <button id="btnRejouer" class="btn-rejouer">
+        Tu veux rejouer mon gaté ??
+      </button>
+    </section>
+    <section class="zone-vies">
+      <div id="vies"></div>
+    </section>
+    <section class="jeu">
+      <div class="mot">
+        <p>_ _ _ _ _</p>
+      </div>
+      <div class="pendu">
+        <img id="imagePendu" src="images/pendu0.jpg" />
+      </div>
+    </section>
+    <section class="zone-lettres">
+      <div class="lettres-donnees">
+        <label for="lettre">Donne-moi une lettre le sang </label>
+        <input type="text" id="lettre" maxlength="1" />
+        <button id="btnValider" class="btn-valider">Tié sûr le tigre ?</button>
+      </div>
+      <div class="mauvaises-lettres">
+        <p>Mauvaises lettres :</p>
+        <div id="fausses"></div>
+      </div>
+    </section>
+    <section class="message">
+      <p id="message"></p>
+    </section>
+    <script src="src/main.js"></script>
+  </body>
+</html>

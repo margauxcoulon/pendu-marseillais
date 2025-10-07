@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+header h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: #ffcc00;
+  text-shadow: 2px 2px #003399;
+  margin: 20px 0;
+}
+
+.controle {
+  text-align: center;
+  margin: 10px;
+}
+
+.zone-vies {
+  margin-right: 50px;
+  text-align: end;
+}
+
+#vies {
+  font-size: 2rem;
+}
+
+.coeur {
+  display: inline-block;        /* important pour l'animation/transform */
+  font-size: 2.6rem;            /* ajuste la taille */
+  margin: 0 6px;
+  line-height: 1;
+  transition: transform 0.15s ease;
+  will-change: transform;
+}
+
+/* animer uniquement les cœurs PAS perdus */
+.coeur:not(.perdu) {
+  color: red;
+  animation: heartbeat 1.2s infinite;
+}
+
+/* cœurs "perdus" gris et statiques */
+.coeur.perdu {
+  color: lightgray;
+  animation: none !important;
+}
+
+/* animation coeur */
+@keyframes heartbeat {
+  0%   { transform: scale(1); }
+  25%  { transform: scale(1.18); }
+  40%  { transform: scale(1); }
+  60%  { transform: scale(1.10); }
+  100% { transform: scale(1); }
+}
+
+.jeu {
+  display: flex;
+  justify-content: space-between; /* mot à gauche, pendu à droite */
+  align-items: center;
+  width: 80%; /* zone de jeu moins large que l'écran */
+  margin: 0 auto; /* centre la zone sur la page */
+}
+
+.mot {
+  flex: 1; /* prend l’espace dispo */
+  text-align: center; /* centre le mot dans sa zone */
+  font-size: 4rem;
+}
+
+.pendu img {
+  max-width: 300px;
+  height: auto; /* garde les proportions */
+}
+
+.zone-lettres {
+  display: flex;
+  justify-content: space-between; /* donner une lettre à gauche, mauvaises lettres à droite */
+  align-items: center; /* aligne verticalement */
+  margin: 20px 50px;
+}
+
+.lettres-donnees {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espace entre label, input et bouton */
+}
+
+.mauvaises-lettres {
+  text-align: end;
+}
+
+.mauvaises-lettres p {
+  margin: 0;
+}
+
+.mauvaise {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 1.5rem;
+  margin: 0 5px;
+}
+
+.message p {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px auto;
+  padding: 15px 25px;
+  border-radius: 12px;
+  width: fit-content;
+  animation: pop 0.3s ease-in-out;
+}
+
+.message p:not(.perdu) {
+  background-color: #d4edda; /* vert clair */
+  color: #155724; /* vert foncé */
+  border: 2px solid #155724;
+}
+
+.message p.perdu {
+  background-color: #f8d7da; /* rouge clair */
+  color: #721c24; /* rouge foncé */
+  border: 2px solid #721c24;
+}
+
+/* petite animation d’apparition */
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.btn-valider {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer; /* Change le curseur de la souris : flèche normale => main sélective */
+  transition: 0.2s;
+}
+
+.btn-valider:hover {
+  background-color: #45a049; /* changer la couleur du bouton quand la souris passe dessus */
+  transform: scale(1.05); /* petit effet d’agrandissement */
+}
+
+.btn-rejouer {
+  background-color: #ffd700;
+  color: #003399;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-rejouer:hover {
+  background-color: #e6b800;
+  transform: scale(1.05);
+}
+
+.top-scores {
+  margin: 30px auto;
+  width: 60%;
+  text-align: center;
+}
+
+.top-scores h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ffcc00;
+  text-shadow: 2px 2px #003399;
+}
+
+.top-scores ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.top-scores li {
+  background: #f9f9f9;
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  transition: 0.2s;
+}
+
+.top-scores li:hover {
+  background: #fffae6; /* jaune clair au survol */
+  transform: scale(1.02);
+}
+
+.top-scores li:first-child {
+  background: #ffd700;
+  font-weight: bold;
+  font-size: 1.4rem;
+  border: 2px solid #003399;
+}

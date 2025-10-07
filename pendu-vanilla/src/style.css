@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+header h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: #ffcc00;
+  text-shadow: 2px 2px #003399;
+  margin: 20px 0;
+}
+
+.controle {
+  text-align: center;
+  margin: 10px;
+}
+
+.zone-vies {
+  margin-right: 50px;
+  text-align: end;
+}
+
+#vies {
+  font-size: 2rem;
+}
+
+.coeur {
+  color: red;
+  margin: 0 3px;
+}
+
+.coeur.perdu {
+  color: lightgray;
+}
+
+.jeu {
+  display: flex;
+  justify-content: space-between; /* mot à gauche, pendu à droite */
+  align-items: center;
+  width: 80%; /* zone de jeu moins large que l'écran */
+  margin: 0 auto; /* centre la zone sur la page */
+}
+
+.mot {
+  flex: 1; /* prend l’espace dispo */
+  text-align: center; /* centre le mot dans sa zone */
+  font-size: 4rem;
+}
+
+.pendu img {
+  max-width: 285px;
+  height: auto; /* garde les proportions */
+}
+
+.zone-lettres {
+  display: flex;
+  justify-content: space-between; /* donner une lettre à gauche, mauvaises lettres à droite */
+  align-items: center; /* aligne verticalement */
+  margin: 20px 50px;
+}
+
+.lettres-donnees {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espace entre label, input et bouton */
+}
+
+.mauvaises-lettres {
+  text-align: end;
+}
+
+.mauvaises-lettres p {
+  margin: 0;
+}
+
+.mauvaise {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 1.5rem;
+  margin: 0 5px;
+}
+
+#message {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: darkgreen;
+  text-align: center;
+}
+
+#message.perdu {
+  color: red;
+}
+
+.btn-valider {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer; /* Change le curseur de la souris : flèche normale => main sélective */
+  transition: 0.2s;
+}
+
+.btn-valider:hover {
+  background-color: #45a049; /* changer la couleur du bouton quand la souris passe dessus */
+  transform: scale(1.05); /* petit effet d’agrandissement */
+}
+
+.btn-rejouer {
+  background-color: #ffd700;
+  color: #003399;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-rejouer:hover {
+  background-color: #e6b800;
+  transform: scale(1.05);
+}
